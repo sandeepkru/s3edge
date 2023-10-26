@@ -1,0 +1,64 @@
+site_name: S3Edge
+
+repo_name: sandeepkru/s3edge
+repo_url: https://github.com/sandeepkru/s3edge
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  features:
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.tabs
+    - toc.follow
+
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+
+plugins:
+  - blog
+  - search
+
+markdown_extensions:
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+nav:
+  - Home: index.md
+  - Product: product.md
+  - Docs:
+    - Architecture:
+      - architecture.md
+      - Core concepts: concepts.md
+      - Dependencies: dependencies.md
+    - Installation: installation.md
+    - Running:
+      - Single node: single_node.md
+    - Troubleshooting: troubleshooting.md
+  - Developers:
+    - Configuration: configuration.md
+  - Development blog:
+    - blog/index.md
